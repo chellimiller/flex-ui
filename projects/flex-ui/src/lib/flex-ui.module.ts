@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { FlexUiComponent } from './flex-ui.component';
 
 @NgModule({
   imports: [
   ],
-  declarations: [FlexUiComponent],
-  exports: [FlexUiComponent]
+  declarations: [],
+  exports: []
 })
-export class FlexUiModule { }
+export class FlexUi { }
