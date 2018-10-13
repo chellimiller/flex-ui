@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "flex-ui": [
+        "dist/flex-ui"
+      ],
+      "flex-ui/*": [
+        "dist/flex-ui/*"
+      ]
+    }
   }
 }

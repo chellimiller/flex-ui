@@ -50,6 +50,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "port": 80,
             "browserTarget": "flex-ui-demo:build"
           },
           "configurations": {
@@ -115,6 +116,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "flex-ui": {
+      "root": "projects/flex-ui",
+      "sourceRoot": "projects/flex-ui/src",
+      "projectType": "library",
+      "prefix": "fui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/flex-ui/tsconfig.lib.json",
+            "project": "projects/flex-ui/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/flex-ui/src/test.ts",
+            "tsConfig": "projects/flex-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/flex-ui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/flex-ui/tsconfig.lib.json",
+              "projects/flex-ui/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
