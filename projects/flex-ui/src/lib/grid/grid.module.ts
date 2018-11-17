@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GridComponent } from './grid.component';
 
 /**
  * Grid Module
@@ -10,6 +11,11 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule
   ],
-  declarations: []
+  declarations: [
+    GridComponent
+  ],
+  exports: [
+    GridComponent,
+  ]
 })
 export class GridModule { }
