@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FlexUiModule } from 'flex-ui';
+import { FormModule } from './form/form.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { FlexUiModule } from 'flex-ui';
   ],
   imports: [
     BrowserModule,
-    FlexUiModule
+    FormModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

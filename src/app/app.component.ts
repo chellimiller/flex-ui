@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'flex-ui-demo';
+
+  autocomplete = {
+    config: {
+      placeholder: 'HELLO WORLD'
+    },
+    data: {
+      options: [
+        'one', 'two', 'three'
+      ]
+    }
+  }
 }
