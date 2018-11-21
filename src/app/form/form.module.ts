@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
   imports: [
@@ -21,10 +22,12 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
     BrowserAnimationsModule,
   ],
   declarations: [
-    AutocompleteComponent
+    AutocompleteComponent,
+    CheckboxComponent
   ],
   exports: [
-    AutocompleteComponent
+    AutocompleteComponent,
+    CheckboxComponent
   ]
 })
 export class FormModule { }
