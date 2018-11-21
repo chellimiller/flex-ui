@@ -8,10 +8,18 @@ import { FlexForm } from './form/objects';
 export class AppComponent {
   title = 'flex-ui-demo';
 
-  autocompleteConfig: FlexForm.Autocomplete.Configuration = {
+  autocompleteConfig: FlexForm.AutocompleteConfiguration = {
     placeholder: 'HELLO WORLD',
     data: [
         'one', 'two', 'three'
       ]
+  };
+
+  checkboxConfig: FlexForm.CheckboxConfiguration = {
+    checked: false,
+    disabled: false,
+    indeterminate: false,
+    labelPosition: 'after',
+    data: 'HelloWorld'
   };
 }

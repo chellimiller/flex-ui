@@ -5,9 +5,11 @@ import {
   MatAutocompleteModule,
   MatFormFieldModule,
   MatInputModule,
+  MatCheckboxModule,
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
@@ -18,7 +20,9 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
   ],
   declarations: [

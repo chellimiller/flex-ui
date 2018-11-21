@@ -26,6 +26,25 @@ export namespace FlexForm {
         placeholder: string;
 
     }
+
+    /** Configuration for a simple checkbox */
+    export interface CheckboxConfiguration extends FlexComponentConfiguration {
+
+        /** Label for the checkbox. */
+        data: string;
+
+        /** Whether or not the checkbox is selected. */
+        checked: boolean;
+
+        /** Whether or not the checkbox is disabled. */
+        disabled: boolean;
+
+        /** Whether or not the checkbox is indeterminate. */
+        indeterminate: boolean;
+
+        /** Position of the label. */
+        labelPosition: 'after' | 'before';
+    }
 }
 
 export namespace Util {
