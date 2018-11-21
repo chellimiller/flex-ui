@@ -2,22 +2,25 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { FlexForm, Util } from '../objects';
+import { FlexForm, Util, FlexComponent } from '../objects';
 
+/**
+ * Provides a text input enhanced by a panel of suggested options.
+ */
 @Component({
   selector: 'demo-autocomplete',
   templateUrl: './autocomplete.component.html'
 })
-export class AutocompleteComponent implements FlexForm.Autocomplete.Configuration, OnInit {
+export class AutocompleteComponent implements FlexForm.AutocompleteConfiguration, FlexComponent, OnInit {
 
-  @Input() config: FlexForm.Autocomplete.Configuration;
+  @Input() config: FlexForm.AutocompleteConfiguration;
 
-  get data(): FlexForm.Autocomplete.Configuration['data'] {
-    return Util.getProperty<FlexForm.Autocomplete.Configuration['data']>(this.config, 'data', []);
+  get data(): FlexForm.AutocompleteConfiguration['data'] {
+    return Util.getProperty<FlexForm.AutocompleteConfiguration['data']>(this.config, 'data', []);
   }
 
-  get placeholder(): FlexForm.Autocomplete.Configuration['placeholder'] {
-    return Util.getProperty<FlexForm.Autocomplete.Configuration['placeholder']>(this.config, 'placeholder', '');
+  get placeholder(): FlexForm.AutocompleteConfiguration['placeholder'] {
+    return Util.getProperty<FlexForm.AutocompleteConfiguration['placeholder']>(this.config, 'placeholder', '');
   }
 
   public formControl: FormControl = new FormControl();
