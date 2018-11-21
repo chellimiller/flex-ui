@@ -15,12 +15,12 @@ export class AutocompleteComponent implements FlexForm.AutocompleteConfiguration
 
   @Input() config: FlexForm.AutocompleteConfiguration;
 
-  get data(): FlexForm.AutocompleteConfiguration['data'] {
-    return Util.getProperty<FlexForm.AutocompleteConfiguration['data']>(this.config, 'data', []);
+  get data(): string[] {
+    return Util.getProperty<string[]>(this.config, 'data', []);
   }
 
-  get placeholder(): FlexForm.AutocompleteConfiguration['placeholder'] {
-    return Util.getProperty<FlexForm.AutocompleteConfiguration['placeholder']>(this.config, 'placeholder', '');
+  get placeholder(): string {
+    return Util.getProperty<string>(this.config, 'placeholder', '');
   }
 
   public formControl: FormControl = new FormControl();
